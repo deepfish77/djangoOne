@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'posts',
+    
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -39,7 +39,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'companies',
-    'rest_framework'
+    'rest_framework',
+    'restone',
+    'teemiz',
+    'snippets.apps.SnippetsConfig',
+    'mmm',
+    'clear_cache',
+    'reset_migrations',
+    'posts'
  
 ]
 
@@ -87,6 +94,9 @@ WSGI_APPLICATION = 'djangoproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
+         'OPTIONS': {
+            'sql_mode': 'traditional',
+        },
         'NAME': 'djangoproject',
         'USER': 'root',
         'PASSWORD': '123456',
